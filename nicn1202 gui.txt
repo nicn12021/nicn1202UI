@@ -1,0 +1,49 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("nicn1202's Script Hub", "Synapse")
+
+-- MAIN
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Main")
+
+
+MainSection:NewButton("Domain X", "Loads Domain X", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexsoftworks/Domain/main/source'),true))()
+end)
+
+MainSection:NewToggle("speeed", "Make you go fast", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end
+end)
+
+MainSection:NewButton("Infinite Yield", "best fe admin that i know", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+
+--LOCAL PLAYER
+local Player = Window:NewTab("Local Player")
+local PlayerSection = Player:NewSection("Player")
+
+PlayerSection:NewSlider("Walkspeed", "speeed", 1000, 16, function(s) -- 1000 (MaxValue) | 16 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+PlayerSection:NewButton("Fling GUI", "Loads fling gui", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
+end)
+
+
+--OTHER
+local Other = Window:NewTab("Other")
+local OtherSection = Other:NewSection("Other")
+
+OtherSection:NewButton("Owl hub", "best hub for fps that i know", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+end)
+
+OtherSection:NewButton("Voidz", "work for games ", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RTrade/Voidz/main/Games.lua"))();
+end)
